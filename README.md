@@ -73,7 +73,7 @@ machine-learning-project/
 
 
 ### Model Training and Evaluation
-###### The project includes Jupyter notebooks that guide you through each step of the machine learning workflow:\
+###### The project includes Jupyter notebooks that guide you through each step of the machine learning workflow:
 
 **Data Preprocessing:** Load and clean the data, handle missing values, and perform feature engineering.
 <br/>
