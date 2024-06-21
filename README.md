@@ -71,13 +71,19 @@ machine-learning-project/
 └── README.md               # Project documentation
 ```
 
-###Model Training and Evaluation
-######The project includes Jupyter notebooks that guide you through each step of the machine learning workflow:
 
+###Model Training and Evaluation
+
+######The project includes Jupyter notebooks that guide you through each step of the machine learning workflow:
+<br/>
 **Data Preprocessing:** Load and clean the data, handle missing values, and perform feature engineering.
+<br/>
 **Model Training:** Train various machine learning models, such as linear regression, decision trees, and neural networks.
+<br/>
 **Model Evaluation:** Evaluate model performance using metrics like accuracy, precision, recall, and F1 score.
+<br/>
 **Hyperparameter Tuning:** Optimize model parameters using techniques like grid search and random search.
+<br/>
 
 ### Getting Started
 
