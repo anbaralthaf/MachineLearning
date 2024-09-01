@@ -93,10 +93,6 @@ machine-learning-project/
 2. **Navigate to a Project**: Explore the `MachineLearning` directory to find the project you want to work on.
 3. **Follow the Instructions**: Each project folder contains a `README.md` with setup instructions and detailed information.
 4. **Learn and Contribute:** Use the repository as a learning resource and feel free to contribute by submitting issues, pull requests, or suggestions.
-5. **Run the Project**: Follow the setup instructions to run the project locally using
-   ```bash
-    npm start
-    ```
 
 ***License***
 <br/>
