@@ -1,4 +1,3 @@
-
 ---
 
 # Week 06: Cost Functions
@@ -9,33 +8,34 @@
 - Types:
   - **Regression Cost Functions:**
     - **Mean Squared Error (MSE):**  
-      `MSE = (1/n) * Σ(y_i - ŷ_i)^2`
+      $$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $$
     - **Mean Absolute Error (MAE):** Measures the absolute differences between predicted and actual values.
   - **Classification Cost Functions:**
     - **Binary Cross-Entropy (Log Loss):**  
-      `Cross-Entropy = -(1/n) * Σ [y_i log(ŷ_i) + (1 - y_i) log(1 - ŷ_i)]`
+      $$ \text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] $$
     - **Multi-Class Cross-Entropy:** Used when there are more than two target classes.
 
 ### **2. Gradient Descent**
 - **Gradient Descent** is an optimization algorithm used to minimize the cost function.
 - Formula:  
-  `θ_j = θ_j - α * (1/m) Σ (h_θ(x^(i)) - y^(i)) * x_j^(i)`
-  
+  $$ \theta_j = \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m} (h_{\theta}(x^{(i)}) - y^{(i)})x_j^{(i)} $$
   Where:
-  - `θ_j`: Parameters (weights) of the model.
-  - `α`: Learning rate.
-  - `h_θ(x^(i))`: Predicted value.
-  - `y^(i)`: Actual value.
+  - \( \theta_j \): Parameters (weights) of the model.
+  - \( \alpha \): Learning rate.
+  - \( h_{\theta}(x^{(i)}) \): Predicted value.
+  - \( y^{(i)} \): Actual value.
 
 ### **3. Common Cost Functions**
 - **Mean Squared Error (MSE):**  
-  `MSE = (1/n) * Σ(y_i - ŷ_i)^2`
+  $$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $$  
+  Penalizes larger errors due to the square term.
   
 - **Cross-Entropy (Binary):**  
-  `Cross-Entropy = -(1/n) * Σ [y_i log(ŷ_i) + (1 - y_i) log(1 - ŷ_i)]`
+  $$ \text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] $$  
+  Measures the difference between two probability distributions.
 
 ### **4. Assignments**
-- **Apply linear regression** using gradient descent for the dataset `x = {1, 2, 4, 3, 5}` and `y = {1, 3, 3, 2, 5}`. Plot error vs. iteration for 4 epochs.
+- **Apply linear regression** using gradient descent for the dataset \( x = \{1, 2, 4, 3, 5\} \) and \( y = \{1, 3, 3, 2, 5\} \). Plot error vs. iteration for 4 epochs.
 - **Apply logistic regression** for classification and plot error vs. iteration.
 - Use **scikit-learn** to compare results for different values of intercepts and slopes in regression models.
 
@@ -46,13 +46,13 @@
 ### **1. Bayes' Theorem**
 - **Bayes' Theorem** provides a way to update the probability estimate of an event based on new evidence:
   
-  `P(A|B) = [P(B|A) * P(A)] / P(B)`
+  $$ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $$
   
   Where:
-  - `P(A|B)`: Posterior probability (probability of A after knowing B).
-  - `P(B|A)`: Likelihood (probability of B given A).
-  - `P(A)`: Prior probability of A.
-  - `P(B)`: Probability of B.
+  - \( P(A|B) \): Posterior probability (probability of A after knowing B).
+  - \( P(B|A) \): Likelihood (probability of B given A).
+  - \( P(A) \): Prior probability of A.
+  - \( P(B) \): Probability of B.
 
 ### **2. Naïve Bayes Classifier**
 - **Naïve Assumption**: Assumes all features are independent of each other.
@@ -87,9 +87,9 @@
   - Stores training data and classifies a new data point based on the majority vote of its K nearest neighbors.
   - **Distance Metrics**:
     - **Euclidean Distance**:
-      `d(x, y) = sqrt(Σ(x_i - y_i)^2)`
+      $$ d(x, y) = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2} $$
     - **Manhattan Distance**:
-      `d(x, y) = Σ |x_i - y_i|`
+      $$ d(x, y) = \sum_{i=1}^{n} |x_i - y_i| $$
   
 - **Choosing K**: Small values of K can lead to overfitting, while large K values can lead to underfitting.
 
@@ -97,10 +97,10 @@
 - **ID3 (Iterative Dichotomiser 3)** builds a decision tree using a top-down, greedy approach.
 - **Metric**: Information Gain (based on entropy).
   
-  `Entropy(S) = -p_1 log_2(p_1) - p_2 log_2(p_2)`
+  $$ \text{Entropy}(S) = -p_1 \log_2(p_1) - p_2 \log_2(p_2) $$
   
   **Information Gain**:
-  `Gain(S, A) = Entropy(S) - Σ(|S_v| / |S|) * Entropy(S_v)`
+  $$ \text{Gain}(S, A) = \text{Entropy}(S) - \sum_{v \in A} \frac{|S_v|}{|S|} \cdot \text{Entropy}(S_v) $$
 
 ### **3. Assignments**
 - Implement **KNN** from scratch and classify a new point.
@@ -114,7 +114,7 @@
 - **C4.5**: An extension of ID3 that handles both categorical and continuous data.
 - **CART (Classification and Regression Trees)**: Produces binary splits using the **Gini Index**:
   
-  `Gini(S) = 1 - Σ(p_i)^2`
+  $$ \text{Gini}(S) = 1 - \sum_{i=1}^{c}(p_i)^2 $$
 
 ### **2. Pruning**
 - **Pruning** reduces the size of the tree to avoid overfitting:
@@ -143,7 +143,7 @@
 ### **3. Evaluating Clustering**
 - **Sum of Squared Errors (SSE)**: Measures how well the data points fit into clusters.
   
-  `SSE = Σ Σ (x_j - μ_i)^2`
+  $$ \text{SSE} = \sum_{i=1}^{K} \sum_{x_j \in C_i} (x_j - \mu_i)^2 $$
 
 ### **4. Assignments**
 - Perform **K-Means clustering** with different values of **K** and plot SSE vs. K.
