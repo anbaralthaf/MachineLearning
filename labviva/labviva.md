@@ -1,4 +1,3 @@
-
 ---
 
 # Week 06: Cost Functions
@@ -9,17 +8,23 @@
 - Types:
   - **Regression Cost Functions:**
     - **Mean Squared Error (MSE):**  
-      $ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $
+      ```latex
+$1
+```
     - **Mean Absolute Error (MAE):** Measures the absolute differences between predicted and actual values.
   - **Classification Cost Functions:**
     - **Binary Cross-Entropy (Log Loss):**  
-      $ \text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] $
+      ```latex
+$1
+```
     - **Multi-Class Cross-Entropy:** Used when there are more than two target classes.
 
 ### **2. Gradient Descent**
 - **Gradient Descent** is an optimization algorithm used to minimize the cost function.
 - Formula:  
-  $ \theta_j = \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m} (h_{\theta}(x^{(i)}) - y^{(i)})x_j^{(i)} $
+  ```latex
+$1
+```
   Where:
   - \( \theta_j \): Parameters (weights) of the model.
   - \( \alpha \): Learning rate.
@@ -28,11 +33,15 @@
 
 ### **3. Common Cost Functions**
 - **Mean Squared Error (MSE):**  
-  $ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $  
+  ```latex
+$1
+```  
   Penalizes larger errors due to the square term.
   
 - **Cross-Entropy (Binary):**  
-  $ \text{Cross-Entropy} = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] $  
+  ```latex
+$1
+```  
   Measures the difference between two probability distributions.
 
 ### **4. Assignments**
@@ -47,7 +56,9 @@
 ### **1. Bayes' Theorem**
 - **Bayes' Theorem** provides a way to update the probability estimate of an event based on new evidence:
   
-  $ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $
+  ```latex
+$1
+```
   
   Where:
   - \( P(A|B) \): Posterior probability (probability of A after knowing B).
@@ -88,9 +99,13 @@
   - Stores training data and classifies a new data point based on the majority vote of its K nearest neighbors.
   - **Distance Metrics**:
     - **Euclidean Distance**:
-      $ d(x, y) = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2} $
+      ```latex
+$1
+```
     - **Manhattan Distance**:
-      $ d(x, y) = \sum_{i=1}^{n} |x_i - y_i| $
+      ```latex
+$1
+```
   
 - **Choosing K**: Small values of K can lead to overfitting, while large K values can lead to underfitting.
 
@@ -98,10 +113,14 @@
 - **ID3 (Iterative Dichotomiser 3)** builds a decision tree using a top-down, greedy approach.
 - **Metric**: Information Gain (based on entropy).
   
-  $ \text{Entropy}(S) = -p_1 \log_2(p_1) - p_2 \log_2(p_2) $
+  ```latex
+$1
+```
   
   **Information Gain**:
-  $ \text{Gain}(S, A) = \text{Entropy}(S) - \sum_{v \in A} \frac{|S_v|}{|S|} \cdot \text{Entropy}(S_v) $
+  ```latex
+$1
+```
 
 ### **3. Assignments**
 - Implement **KNN** from scratch and classify a new point.
@@ -115,7 +134,9 @@
 - **C4.5**: An extension of ID3 that handles both categorical and continuous data.
 - **CART (Classification and Regression Trees)**: Produces binary splits using the **Gini Index**:
   
-  $ \text{Gini}(S) = 1 - \sum_{i=1}^{c}(p_i)^2 $
+  ```latex
+$1
+```
 
 ### **2. Pruning**
 - **Pruning** reduces the size of the tree to avoid overfitting:
@@ -144,7 +165,9 @@
 ### **3. Evaluating Clustering**
 - **Sum of Squared Errors (SSE)**: Measures how well the data points fit into clusters.
   
-  $ \text{SSE} = \sum_{i=1}^{K} \sum_{x_j \in C_i} (x_j - \mu_i)^2 $
+  ```latex
+$1
+```
 
 ### **4. Assignments**
 - Perform **K-Means clustering** with different values of **K** and plot SSE vs. K.
