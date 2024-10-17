@@ -16,7 +16,7 @@
 ### **2. Gradient Descent**
 - **Gradient Descent** is an optimization algorithm used to minimize the cost function.
 - Formula:  
-  \( \theta_j = \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})x_j^{(i)} \)  
+  $ \( \theta_j = \theta_j - \alpha \frac{1}{m} \sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})x_j^{(i)} \)  
   Where:
   - \( \theta_j \): Parameters (weights) of the model.
   - \( \alpha \): Learning rate.
