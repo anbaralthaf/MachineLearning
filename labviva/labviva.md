@@ -1,4 +1,3 @@
-
 ---
 
 # Week 06: Cost Functions
