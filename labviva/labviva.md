@@ -9,7 +9,7 @@
 - Types:
   - **Regression Cost Functions:**
     - **Mean Squared Error (MSE):**  
-      $$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $$
+      $$ text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 $$
     - **Mean Absolute Error (MAE):** Measures the absolute differences between predicted and actual values.
   - **Classification Cost Functions:**
     - **Binary Cross-Entropy (Log Loss):**  
