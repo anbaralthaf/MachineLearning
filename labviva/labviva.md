@@ -31,7 +31,7 @@
 
 ---
 
-# Week 08: Naïve Bayes Classifier
+# Week 07: Naïve Bayes Classifier
 
 ### **1. Bayes' Theorem**
 - **Bayes' Theorem** helps update the probability estimate of an event based on new evidence. It calculates the probability of one event given the occurrence of another.
